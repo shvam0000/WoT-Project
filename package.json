@@ -1,0 +1,25 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "thing.js",
+  "scripts": {
+    "build" : "wam build ./src/thing.js ./dist/bundle.js",
+    "debug" : "wot-servient --inspect-brk -f servient.config.json ./src/thing.js",
+    "start" : "wot-servient -f servient.config.json ./dist/bundle.js",
+    "start:dev" : "nodemon -w \"src/**\" --ext \"ts,json\" --exec \"npm run build && npm run start\""
+  },
+  "keywords": [
+      ""
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@node-wot/cli": "^0.7.0-SNAPSHOT.2",
+    "@arces-wot/wam": "^0.5.6",
+    "nodemon": "^2.0.14"
+  },
+  "dependencies": {
+    "@node-wot/core": "^0.7.0-SNAPSHOT.2"
+  }
+}
