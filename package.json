@@ -1,25 +1,31 @@
 {
-  "name": "test",
+  "name": "alexa-simulator",
   "version": "1.0.0",
   "description": "",
   "main": "thing.js",
   "scripts": {
-    "build" : "wam build ./src/thing.js ./dist/bundle.js",
-    "debug" : "wot-servient --inspect-brk -f servient.config.json ./src/thing.js",
-    "start" : "wot-servient -f servient.config.json ./dist/bundle.js",
-    "start:dev" : "nodemon -w \"src/**\" --ext \"ts,json\" --exec \"npm run build && npm run start\""
+    "build": "wam build ./src/thing.js ./dist/bundle.js",
+    "debug": "wot-servient --inspect-brk -f servient.config.json ./src/thing.js",
+    "start": "wot-servient -f servient.config.json ./dist/bundle.js",
+    "start:dev": "nodemon -w \"src/**\" --ext \"ts,json\" --exec \"npm run build && npm run start\"",
+    "start:http": "node app.js"
   },
   "keywords": [
-      ""
+    ""
   ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@node-wot/cli": "^0.7.0-SNAPSHOT.2",
     "@arces-wot/wam": "^0.5.6",
-    "nodemon": "^2.0.14"
+    "@node-wot/cli": "^0.7.0-SNAPSHOT.2",
+    "nodemon": "^3.0.3"
   },
   "dependencies": {
-    "@node-wot/core": "^0.7.0-SNAPSHOT.2"
+    "@node-wot/core": "^0.7.0-SNAPSHOT.2",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "mongoose": "^8.1.3"
   }
 }

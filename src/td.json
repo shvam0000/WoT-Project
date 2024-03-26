@@ -1,0 +1,24 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1"
+    ],
+    "@type": [
+        "Thing"
+    ],
+    "title": "Amazon Echo Simulator",
+    "securityDefinitions": {
+        "no_sec": {
+            "scheme": "nosec"
+        }
+    },
+    "security": "no_sec",
+    "properties": {
+        "hello":{
+            "type": "string",
+            "title": "greetings",
+            "description": "It says hello"
+        }
+    },
+    "events": {},
+    "actions": {}
+}
